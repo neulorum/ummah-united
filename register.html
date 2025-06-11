@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Ummah United Wrestling Club</title>
+    <link rel="stylesheet" href="Ummah United Wrestling Club.css" />
+    <style>
+      .success-message {
+        display: none;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: var(--secondary-color);
+        color: var(--white);
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Ummah United Wrestling club.JPG" alt="Logo"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="register.html" class="active">Register</a></li>
+          <li><a href="clinics.html">Clinics</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-light">
+        <div class="section-content">
+          <h2>Register for Classes</h2>
+          <form id="registrationForm">
+            <label for="parentName">Parent/Guardian Name:</label><br />
+            <input
+              type="text"
+              id="parentName"
+              name="parentName"
+              required
+            /><br />
+
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="phone">Phone Number:</label><br />
+            <input type="tel" id="phone" name="phone" required /><br />
+
+            <div id="studentsWrapper">
+              <!-- First student block -->
+              <div class="student-block">
+                <h3>Student 1</h3>
+                <label>Student Name:</label><br />
+                <input type="text" name="studentName[]" required /><br />
+
+                <label>Student Age:</label><br />
+                <input type="number" name="studentAge[]" required /><br />
+                <label>Gender:</label><br/>
+                <select name="studentGender[]">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="prefer_not">Prefer not to say</option>
+                </select><br/><br/>
+               
+                <label>Class Group:</label><br />
+                <select name="studentGroup[]">
+                  <option value="schoolboy">Schoolboy (6–10)</option>
+                  <option value="youth">Youth (10–14)</option>
+                  <option value="highschool">High School (14–18)</option>
+                  <option value="adult">Adult (18+)</option>
+                  <option value="advanced">Advanced Invite</option>
+                </select><br /><br />
+
+                <label>Preferred Days:</label><br/>
+                <input type="checkbox" name="preferredDays[]" value="Mon"> Mon
+                <input type="checkbox" name="preferredDays[]" value="Wed"> Wed
+                <input type="checkbox" name="preferredDays[]" value="Fri"> Fri<br/><br/>
+
+
+                <label>Emergency Contact Name:</label><br/>
+                <input type="text" name="emergencyName" /><br/>
+                <label>Emergency Phone:</label><br/>
+                <input type="tel" name="emergencyPhone" /><br/>
+
+                <label>
+                    <input type="checkbox" name="waiver" required />
+                    I agree to the club's waiver and participation terms. <a href="waiver.html" target="blank"> Waiver {&} Release of Liability</a>
+                    
+                </label><br/><br/>
+
+              </div>
+            </div>
+
+            <button type="button" class="cta-button" onclick="addStudent()">
+              ➕ Add Another Student</button
+            ><br /><br />
+
+            <label for="notes">Anything we should know?</label><br />
+            <textarea id="notes" name="notes" rows="4"></textarea><br />
+
+            <button type="submit" class="cta-button">Register Now</button>
+          </form>
+
+          <div id="successMessage" class="success-message">
+            ✅ Thank you! Your registration has been received.
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ummah United Wrestling Club. All rights reserved.</p>
+    </footer>
+
+
+    <script>
+      const form = document.getElementById('registrationForm');
+      const successMessage = document.getElementById('successMessage');
+      const studentsWrapper = document.getElementById('studentsWrapper');
+      let studentCount = 1;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        successMessage.style.display = 'block';
+        form.reset();
+        studentCount = 1;
+        // Reset to only one student block
+        studentsWrapper.innerHTML = `
+          <div class="student-block">
+            <h3>Student 1</h3>
+            <label>Student Name:</label><br/>
+            <input type="text" name="studentName[]" required /><br/>
+            <label>Student Age:</label><br/>
+            <input type="number" name="studentAge[]" required /><br/>
+            <label>Class Group:</label><br/>
+            <select name="studentGroup[]">
+              <option value="schoolboy">Schoolboy (6–10)</option>
+              <option value="youth">Youth (10–14)</option>
+              <option value="highschool">High School (14–18)</option>
+              <option value="adult">Adult (18+)</option>
+              <option value="advanced">Advanced Invite</option>
+            </select><br/><br/>
+          </div>
+        `;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      function addStudent() {
+        studentCount++;
+        const studentBlock = document.createElement('div');
+        studentBlock.classList.add('student-block');
+        studentBlock.innerHTML = `
+          <h3>Student ${studentCount}</h3>
+          <label>Student Name:</label><br/>
+          <input type="text" name="studentName[]" required /><br/>
+          <label>Student Age:</label><br/>
+          <input type="number" name="studentAge[]" required /><br/>
+          <label>Class Group:</label><br/>
+          <select name="studentGroup[]">
+            <option value="schoolboy">Schoolboy (6–10)</option>
+            <option value="youth">Youth (10–14)</option>
+            <option value="highschool">High School (14–18)</option>
+            <option value="adult">Adult (18+)</option>
+            <option value="advanced">Advanced Invite</option>
+          </select><br/><br/>
+        `;
+        studentsWrapper.appendChild(studentBlock);
+      }
+    </script>
+  </body>
+</html>

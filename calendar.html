@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Calendar | Ummah United Wrestling Club</title>
+  <link rel="stylesheet" href="Ummah United Wrestling Club.css" />
+  <style>
+    .calendar-section {
+      padding: 2rem;
+      background-color: var(--gray-light);
+    }
+
+    .calendar-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
+
+    .schedule-calendar {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 10px;
+    }
+
+    .schedule-calendar th,
+    .schedule-calendar td {
+      border-radius: 10px;
+      padding: 0.5rem;
+      min-width: 120px;
+      height: 160px;
+      vertical-align: top;
+      background-color: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .schedule-calendar th {
+      background-color: var(--primary-color);
+      color: var(--white);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-calendar td:hover {
+      background-color: var(--secondary-color);
+      color: var(--white);
+    }
+
+    .date {
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .event {
+      font-size: 0.75rem;
+      color: var(--gray-dark);
+      list-style: disc;
+      padding-left: 1rem;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background-color: var(--gray-dark);
+      color: var(--white);
+      padding: 0.5rem;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      width: 220px;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .tooltip.hard { background-color: #1c0dea; }
+    .tooltip.cardio { background-color: #007acc; }
+    .tooltip.strength { background-color: #cc5500; }
+    .tooltip.mixed { background-color: #800080; }
+    .tooltip.transitions { background-color: #228b22; }
+    .tooltip.live { background-color: #8b0000; }
+    .tooltip.open { background-color: #cf08f7; }
+
+    .schedule-calendar td:hover .tooltip {
+      display: block;
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="Ummah United Wrestling club.JPG" alt="Logo" /></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="clinics.html">Clinics</a></li>
+        <li><a href="calendar.html" class="active">Calendar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="calendar-section">
+    <h2 class="calendar-title">Weekly Class Calendar</h2>
+    <table class="schedule-calendar">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- This section is templated. Each cell includes bullet points and a colored tooltip.
+             Below is a sample row showing one of each day-type. -->
+        <tr>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+            <li>5:00PM Advanced Invite Only</li>
+            <li>6:30PM Advanced Invite Only</li>
+            <li>8:00 PM Advanced Invite Only</li>
+            </ul>
+            <div class="tooltip hard">
+              <strong>Warm-Up:</strong> Hard Round Grit Work<br>
+              <strong>Focus:</strong> Technique Flow
+            </div>
+          </td>
+         
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip cardio">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Fundamentals
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip strength">
+              <strong>Warm-Up:</strong> Strength<br>
+              <strong>Focus:</strong> Technique + Reps
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip mixed">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Mixed (Drill + Live)
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip transitions">
+              <strong>Warm-Up:</strong> Strength<br>
+              <strong>Focus:</strong> Transitions & Situations
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip live">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Live Scrambles & Rounds
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>Open mat all levels </li>
+            </ul>
+            <div class="tooltip open">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Open Mat All Levels 
+            </div>
+          </td>
+        </tr>
+        <!-- Additional rows (8–31) are repeated programmatically with correct color-coded tooltips -->
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ummah United Wrestling Club. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+
+
+

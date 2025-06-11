@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Ummah United Wrestling Club</title>
+    <link rel="stylesheet" href="Ummah United Wrestling Club.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <style>
+      .success-message {
+        display: none;
+        padding: 1rem;
+        margin-top: 1rem;
+        background-color: var(--secondary-color);
+        color: var(--white);
+        border-radius: 5px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"
+            ><img src="Ummah United Wrestling club.JPG" alt="Logo"
+          /></a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="clinics.html">Clinics</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-light">
+        <div class="section-content">
+          <h2>Contact Us</h2>
+
+          <p>
+            If you have any questions, feel free to reach out, use the form
+            below, or check out our social medias for all the fun and adventres
+            ummah has to offer. We'll get back to you as soon as possible!
+          </p>
+
+          <div style="margin-bottom: 2rem;">
+            <strong>Email:</strong>
+            <a href="mailto:coachsayfullah@gmail.com"
+              >coachsayfullah@gmail.com</a
+            ><br />
+            <strong>Phone:</strong> <a href="tel:(314) 456-1130">(314) 456-1130</a
+            ><br />
+            
+            <strong>Training Location:</strong><a href="https://www.google.com/maps/place/8715+Holmes+Rd,+Kansas+City,+MO+64131/@38.9682619,-94.5800163,17z/data=!3m1!4b1!4m6!3m5!1s0x87c0e8b9090a3bc1:0x5942e68528558910!8m2!3d38.9682619!4d-94.5800163!16s%2Fg%2F11bw3yy9_s?entry=ttu&g_ep=EgoyMDI1MDYwNC4wIKXMDSoASAFQAw%3D%3D"> 8715 Holmes Rd Kansas City, MO 64131</a>
+            <br />
+            <strong>Hours:</strong> Mon–Fri 5PM–10PM, Sun 5PM–10PM
+          </div>
+
+          <form id="contactForm">
+            <label for="name">Your Name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+
+            <label for="email">Your Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+
+            <label for="message">Message:</label><br />
+            <textarea id="message" name="message" rows="5" required></textarea
+            ><br />
+
+            <button type="submit" class="cta-button">Send Message</button>
+          </form>
+
+          <div id="contactSuccess" class="success-message">
+            ✅ Thanks! Your message has been sent. We'll get back to you
+            shortly.
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ummah United Wrestling Club. All rights reserved.</p>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a
+          href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Funitedummahwrestling%2F%3Futm_source%3Dqr%26igsh%3DYWU4ejZ6YWQ4cWln&is_from_rle"
+          target="_blank"
+          style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/people/Ummah-United-Wrestling/61574513677692/"
+          target="_blank"
+          style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
+        >
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a
+          href="https://youtube.com/yourclub"
+          target="_blank"
+          style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
+        >
+          <i class="fab fa-youtube"></i>
+        soon to come </a>
+        <a 
+          href="https://www.tiktok.com/@coachsayf1?_d=secCgYIASAHKAESPgo8%2FokMIFCfRK7ZT9juyYaPMSnih03v7Lfmu9xU1u%2Fsd5KsbAqwJCeWfp18eR2hbDh3Y4qS1GpmdvRU3G4UGgA%3D&_r=1&object_id=7278103598936081450&page_open_method=scan_code&schema_type=4&sec_uid=MS4wLjABAAAAt9QKk65PuN58ZqwYEyaRHIJ-9dGt4ZjtGOJyjYiuC2sVGv9tHlwWXppg5a6n8-4b&share_app_id=1233&share_author_id=7278103598936081450&share_uid=7278103598936081450&tt_from=scan_code&utm_campaign=client_scan_code&utm_medium=2&utm_source=scan_code"
+          target="_blank"
+          style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
+        >
+          <i class="fab fa-tiktok"></i>
+        </a>
+        </div>
+    </footer>
+
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      const contactSuccess = document.getElementById('contactSuccess');
+
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        contactSuccess.style.display = 'block';
+        contactForm.reset();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
