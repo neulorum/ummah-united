@@ -539,18 +539,41 @@ footer {
     gap: 1rem;
   }
 }
-/* --- Mobile Overflow Fixes --- */
+
+/* UNIVERSAL MOBILE SAFETY NET */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
+/* SECTION SAFEGUARDS */
+section,
+.section-light,
+.section-dark,
+.section-content,
 .hero-container,
 .program-flex {
-  flex-wrap: wrap;
-  overflow-x: hidden;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
+/* FLEX WRAP + STACKING FIX */
+.hero-container,
+.program-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* RESPONSIVE COLUMNS */
 .hero-image,
 .hero-text,
 .program,
@@ -559,17 +582,22 @@ html, body {
   max-width: 100%;
 }
 
-.program-callout .program-video,
-.social-box {
-  max-width: 100%;
-  width: 100%;
+@media (min-width: 768px) {
+  .hero-text {
+    flex: 1 1 50%;
+  }
+  .hero-image {
+    flex: 1 1 45%;
+  }
+  .program {
+    flex: 1 1 60%;
+  }
+  .program-callout {
+    flex: 1 1 35%;
+  }
 }
 
-.social-box {
-  text-align: center;
-  padding-bottom: 1rem;
-}
-
+/* IMAGE & VIDEO PROTECTION */
 img, video {
   max-width: 100%;
   height: auto;
