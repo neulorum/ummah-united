@@ -1,0 +1,529 @@
+/* Global Styles */
+:root {
+  --primary-color: #5e2d91; /* Purple */
+  --secondary-color: #00a86b; /* Green */
+  --black: #000000;
+  --white: #ffffff;
+  --gray-light: #f5f5f5;
+  --gray-dark: #333333;
+  --font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*--primary-color: 6a0dad #5e2d91*/
+body {
+  margin: 0;
+  font-family: var(--font-stack);
+  background-color: var(--white);
+  color: var(--gray-dark);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 200px;         /* Adjust as needed */
+  width: auto;          /* Maintain aspect ratio */
+  display: block;       /* Prevent spacing under the image */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4rem 2rem;
+  background-color: var(--secondary-color);
+}
+
+
+.hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+
+.hero-image {
+  flex: 1 1 40%;
+  max-width: 40%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+.hero-text {
+  flex: 1 1 55%;
+  color: var(--gray-dark);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.hero-text #tagline {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+
+/*social links*/
+#social_links {
+  background-color: var(--secondary-color);
+  padding: 2rem 0;
+}
+
+#social_container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+}
+
+.social-box {
+  flex: 1 1 100%;
+  text-align: right;
+  margin-top: 1rem;
+}
+
+.social-heading {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: var(--primary-color);
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--white);
+}
+
+
+
+/* Section Styles*/
+.section-light {
+  background-color: var(--gray-light);
+  padding: 3rem 2rem;
+}
+.isection-light {
+  background-color: var(--primary-color);
+  padding: 3rem 2rem;
+}
+
+.section-dark {
+  background-color: var(--gray-dark);
+  color: var(--white);
+  padding: 3rem 2rem;
+}
+
+.section-content p h3 {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+.section-content h2#cal_title {
+  text-align: center;
+}
+
+
+
+
+.isection-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.isection-content p {
+  color: #ccc;
+}
+
+/*service page service box gap control*/
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem !important;
+  margin-top: 2rem;
+  
+}
+
+.service-list * { 
+  margin: 0 !important;
+
+}
+.service-list :nth-child(2){
+  margin-top: 0 !important;
+}
+
+/* Fix layout bleed from first service container */
+.service-list > .service {
+  margin: 0 !important;
+}
+
+/* Force all boxes to have equal visual spacing */
+.service + .service {
+  margin-top: 1.5rem !important;
+}
+
+/* Remove accidental bleed from inner content */
+.service * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.service {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--secondary-color);
+}
+
+
+.service {
+  background-color: #f9f9f9;
+  border-left: 4px solid #660ca6;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+}
+.service {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  border-bottom: 1px solid #ccc;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-details {
+  flex: 1;
+}
+
+.service_pricing {
+  width: 200px;
+  text-align: left;
+}
+.service h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.service ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.service ul li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+/*Program styles*/
+.program-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.program h3 {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.program h2 {
+  font-size: 2.0rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.program ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #333;
+}
+
+.program ul li {
+  margin-bottom: 0.3rem;
+  line-height: 1.6;
+}
+
+.program {
+  background-color: #f9f9f9;
+  border-left: 4px solid #6a0dad;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.473);
+}
+.program-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.program-button{
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+
+}
+
+.program-button:hover {
+  background-color: var(--black);
+}
+
+.program-callout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-top: 2rem;
+  
+}
+
+.program-callout h3 a {
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.program-callout a.program-button {
+  margin-bottom: 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.program-callout a.program-button:hover {
+  background-color: var(--black);
+}
+.program-callout a:hover {
+  color: var(--primary-color);
+}
+
+.program-callout .program-video {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.program h2#class_times{
+  text-align: center;
+}
+.program-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.program {
+  flex: 1 1 60%;
+}
+
+.program-callout {
+  flex: 1 1 35%;
+  max-width: 400px;
+}
+
+
+/*calander sections*/
+.schedule-calendar {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.schedule-calendar th, .schedule-calendar td {
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem;
+  vertical-align: top;
+  min-width: 120px;
+  height: 120px;
+  background-color: var(--white);
+  color: var(--black);
+  position: relative;
+}
+
+.schedule-calendar th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: bold;
+  text-align: center;
+}
+
+.schedule-calendar .date {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: var(--secondary-color);
+}
+
+.schedule-calendar .class-info {
+  font-size: 0.9rem;
+  color: var(--black);
+}
+
+/*button control*/
+.section-cta {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--black);
+}
+
+/* Footer */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+.social-links a {
+  margin: 0 10px;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .hero-container,
+  .program-callout,
+  .service {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-image,
+  .hero-text,
+  .service-details,
+  .service_pricing {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .program-callout {
+    align-items: center;
+    text-align: center;
+  }
+
+  .schedule-calendar th,
+  .schedule-calendar td {
+    font-size: 0.75rem;
+    min-width: 80px;
+    padding: 0.25rem;
+  }
+
+  .logo img {
+    height: 80px;
+  }
+
+  .cta-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .section-content, .isection-content {
+    padding: 1rem;
+  }
+
+  .service-list, .program-list {
+    gap: 1rem;
+  }
+}

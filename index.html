@@ -3,11 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ummah United Wrestling Club helps youth and adults build strength, discipline, and faith through wrestling in Kansas City." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://yourdomain.com/" />
+
+<!-- Open Graph -->
+  <meta property="og:title" content="Ummah United Wrestling Club" />
+  <meta property="og:description" content="Wrestling with purpose – train hard, grow stronger." />
+  <meta property="og:image" content="https://yourdomain.com/path-to-banner.jpg" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+  <meta property="og:type" content="website" />
+
+<!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ummah United Wrestling Club" />
+  <meta name="twitter:description" content="Train with discipline. Grow in strength. Rise in spirit." />
+  <meta name="twitter:image" content="https://yourdomain.com/path-to-banner.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
   <title>Ummah United Wrestling Club</title>
-  <link rel="stylesheet" href="Ummah United Wrestling Club.css" />
+  <link rel="stylesheet" href="Ummah_United_Wrestling_Club.css" />
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    .calendar-section {
+      padding: 2rem;
+      background-color: var(--gray-light);
+    }
+
+    .calendar-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      color: var(--primary-color);
+    }
+
+    .schedule-calendar {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 10px;
+    }
+
+    .schedule-calendar th,
+    .schedule-calendar td {
+      border-radius: 10px;
+      padding: 0.5rem;
+      min-width: 120px;
+      height: 160px;
+      vertical-align: top;
+      background-color: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .schedule-calendar th {
+      background-color: var(--primary-color);
+      color: var(--white);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .schedule-calendar td:hover {
+      background-color: var(--secondary-color);
+      color: var(--white);
+    }
+
+    .date {
+      font-weight: bold;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .event {
+      font-size: 0.75rem;
+      color: var(--gray-dark);
+      list-style: disc;
+      padding-left: 1rem;
+    }
+
+    .tooltip {
+      display: none;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      background-color: var(--gray-dark);
+      color: var(--white);
+      padding: 0.5rem;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      width: 220px;
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .tooltip.hard { background-color: #1c0dea; }
+    .tooltip.cardio { background-color: #007acc; }
+    .tooltip.strength { background-color: #cc5500; }
+    .tooltip.mixed { background-color: #800080; }
+    .tooltip.transitions { background-color: #228b22; }
+    .tooltip.live { background-color: #8b0000; }
+    .tooltip.open { background-color: #cf08f7; }
+
+    .schedule-calendar td:hover .tooltip {
+      display: block;
+    }
+
+    footer {
+      background-color: var(--black);
+      color: var(--white);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -32,7 +142,7 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="classes.html">Classes</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="register.html">Register</a></li>
         <li><a href="clinics.html">Clinics</a> </li>
@@ -44,278 +154,195 @@
   <main>
     <!-- Hero Section -->
     <!-- add group phpoto of bryce and the kids -->
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-image">
-          <img src="Screenshot_20250521-164052.png" ><!-- TODO: Replace with actual hero image -->
-        </div>
-        <div class="hero-text">
-          <p>At Ummah United, our goal is to unite the community and build stronger individuals through the discipline of wrestling — a Sunnah of our Prophet ﷺ and a living metaphor for life’s struggles. Wrestling demands constant effort, resilience, and self-improvement, teaching lessons of perseverance, sacrifice, and character that mirror the journey of striving for Jannah. Our club, rooted in Islamic values but open to all who seek growth, offers a space where hard work on the mat shapes success off the mat — fostering community, faith, and personal excellence.</p>
-          <p id="tagline">#Where Wrestling Meets Puropose.</p>
-        </div>
-      </div>
-      </section>
     
-        <section class="social_links">
-          <div class="social_content" style="text-align: right; margin-top: 2rem;">
-            <h2>Follow Us For Latest updates</h2>
-            <a
-              href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Funitedummahwrestling%2F%3Futm_source%3Dqr%26igsh%3DYWU4ejZ6YWQ4cWln&is_from_rle"
-              target="_blank"
-              style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/people/Ummah-United-Wrestling/61574513677692/"
-              target="_blank"
-              style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
-            >
-              <i class="fab fa-facebook"></i>
-            </a>
-            <a
-              href="https://youtube.com/yourclub"
-              target="_blank"
-              style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
-            >
-              <i class="fab fa-youtube"></i>
-            Coming Soon!
-            </a>
-            <a 
-              href="https://www.tiktok.com/@coachsayf1?_d=secCgYIASAHKAESPgo8%2FokMIFCfRK7ZT9juyYaPMSnih03v7Lfmu9xU1u%2Fsd5KsbAqwJCeWfp18eR2hbDh3Y4qS1GpmdvRU3G4UGgA%3D&_r=1&object_id=7278103598936081450&page_open_method=scan_code&schema_type=4&sec_uid=MS4wLjABAAAAt9QKk65PuN58ZqwYEyaRHIJ-9dGt4ZjtGOJyjYiuC2sVGv9tHlwWXppg5a6n8-4b&share_app_id=1233&share_author_id=7278103598936081450&share_uid=7278103598936081450&tt_from=scan_code&utm_campaign=client_scan_code&utm_medium=2&utm_source=scan_code"
-              target="_blank"
-              style="margin: 0 10px; color: var(--primary-color); font-size: 1.5rem;"
-            >
-              <i class="fab fa-tiktok"></i>
-            </a>
-         </div>
-       </section>
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-image">
+      <img src="Screenshot_20250521-164052.png" alt="Hero image" />
+    </div>
+    <div class="hero-text">
+      <p>At Ummah United, our goal is to unite the community and build stronger individuals through
+         the discipline of wrestling — a Sunnah of our Prophet ﷺ and a living metaphor for life’s 
+         struggles. Wrestling demands constant effort, resilience, and self-improvement, teaching 
+         lessons of perseverance, sacrifice, and character that mirror the journey of striving for
+          Jannah. Our club, rooted in Islamic values but open to all who seek growth, offers a space
+          where hard work on the mat shapes success off the mat — fostering community, faith, and
+          personal excellence.</p>
+      <p id="tagline">#Where Wrestling Meets Purpose.</p>
+    </div>
+    <div class="social-box">
+      <h2 class="social-heading">Follow Us For Latest Updates</h2>
+      <a href="https://www.instagram.com/..." target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/..." target="_blank" class="social-icon">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://youtube.com/yourclub" target="_blank" class="social-icon">
+        <i class="fab fa-youtube"></i> Coming Soon!
+      </a>
+      <a href="https://www.tiktok.com/..." target="_blank" class="social-icon">
+        <i class="fab fa-tiktok"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+    </section>
+      
 
     <section class="isection-light">
       <div class="isection-content">
         <!-- TODO:verify he likes mission statment -->
-        <p>United Ummah strives to create a United and supportive community where individuals of all backgrounds can discover the passion and joy of wrestling. We are dedicated to fostering a love for the sport, empowering new wrestlers to grow, and challenging our committed athletes to reach elite levels of performance. Through the sport of wrestling, we aim to instill coffee values of integrity, accountability, honesty, commitment and hard work. We believe in the power of continuous self-improvement and in shading not just skilled athletes, but strong resilient individuals who carry these values into all aspects of their lives.</p>
+        <p>United Ummah strives to create a United and supportive community where individuals of all backgrounds can 
+          discover the passion and joy of wrestling. We are dedicated to fostering a love for the sport, empowering 
+          new wrestlers to grow, and challenging our committed athletes to reach elite levels of performance. Through 
+          the sport of wrestling, we aim to instill coffee values of integrity, accountability, honesty, commitment and 
+          hard work. We believe in the power of continuous self-improvement and in shading not just skilled athletes,
+           but strong resilient individuals who carry these values into all aspects of their lives.</p>
       </div>
     </section>
 
+    
     <section class="section-dark">
-      <div class="program-list">
-        <div class="program">
-          <h2>Classes and times</h2>
-          <h3>Youth(Ages 7–10)</h3>
-          <ul>
-            <li>TBD</li>
-          </ul>
-
-          <h3>High School (Ages 11–18)</h3>
-          <ul>
-            <li>TBD</li>
-          </ul>
-
-          <h3>Adult Beginners(Ages 18+)</h3>
-          <ul>
-            <li>TBD</li>
-          </ul>
-            
-          <h3>Adult Wrestling (18+)</h3>
-          <ul>
-            <li>TBD</li>
-          </ul>
-
-          <h3>Advanced Class (competitive)</h3>
-          <ul>
-            <li>Invite Only!</li>
-          </ul>
-
-          <h3>Private Session</h3>
-          <ul>
-            <li>Apointment Only!</li>
-          </ul>
-          <div class="program-callout">
-              <video src="singleleg.mp4" alt="VIdeo of kids wrestling" class="program-video" controls autoplay muted loop></video>
-              <h3><a href="services.html">Classes</a> free until 06/20/2025. Why wait? Transform you!</h3>
-              <a href="register.html" class="program-button">Register Today</a>
+      <div class="section-content">
+        <div class="program-flex">
+          <div class="program">
+            <h2 id="class_times">Classes and times</h2>
+            <h3>Youth(Ages 7–10)</h3>
+            <ul><li>TBD</li></ul>
+            <h3>High School (Ages 11–18)</h3>
+            <ul><li>TBD</li></ul>
+            <h3>Adult Beginners(Ages 18+)</h3>
+            <ul><li>TBD</li></ul>
+            <h3>Adult Wrestling (18+)</h3>
+            <ul><li>TBD</li></ul>
+            <h3>Advanced Class (competitive)</h3>
+            <ul><li>Invite Only!</li></ul>
+            <h3>Private Session</h3>
+            <ul><li>Apointment Only!</li></ul>
+          </div>
+          <div class="program-callout" style="text-align: center;">
+            <video src="singleleg.mp4" alt="Video of kids wrestling" class="program-video" controls autoplay muted loop></video>
+            <h3><a href="services.html">Classes</a> FREE! until 06/20/2025. Why wait? Transform you!</h3>
+            <a href="register.html" class="program-button">Register Today</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-light">
-        <div class="section-content">
-            <h2>30-Day Training Schedule and Availability</h2>
-            <table class="schedule-calendar">
-                <thead>
-                    <tr>
-                        <th>Sun</th>
-                        <th>Mon</th>
-                        <th>Tue</th>
-                        <th>Wed</th>
-                        <th>Thu</th>
-                        <th>Fri</th>
-                        <th>Sat</th>
-                    </tr>
-                </thead>
-                <tbody>
-            <!-- Week 1 -->
-                    <tr>
-                        <td>
-                            <!-- Date: -->
-                            <div class="date">1</div>
-                            <!-- Class & Time: -->
-                            <div class="class-info">
-                            <!-- Add class name and time here -->
-                            <!-- Example: Youth Wrestling, 5:00 PM - 6:00 PM -->
-                            </div>
-                        </td>
-                        <td>
-                            <div class="date">2</div>
-                            <div class="class-info">5:00 – 6:15 PM|Schoolboy (6–10)|Cardio Fundamentals</div>
-                            <div class="class-info">6:15 – 7:30 PM|Youth (10–14)|Cardio	Fundamentals</div>
-                            <div class="class-info">7:30 – 8:45 PM|High School (14–18)|Cardio	Fundamentals & Drilling</div>
-                            <div class="class-info"> 8:45 – 10:00 PM|Adult (18+)	Cardio|Fundamentals & Technique</div>
-                            
 
-                        </td>
-                        <td>
-                            <div class="date">3</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">4</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">5</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">6</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">7</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        </tr>
-
-                        <!-- Week 2 -->
-                        <tr>
-                        <td>
-                            <div class="date">8</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">9</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">10</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">11</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">12</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">13</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">14</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        </tr>
-
-                        <!-- Week 3 -->
-                        <tr>
-                        <td>
-                            <div class="date">15</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">16</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">17</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">18</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">19</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">20</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">21</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        </tr>
-
-                        <!-- Week 4 -->
-                        <tr>
-                        <td>
-                            <div class="date">22</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">23</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">24</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">25</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">26</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">27</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">28</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        </tr>
-
-                        <!-- Week 5 (2 days) -->
-                        <tr>
-                        <td>
-                            <div class="date">29</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td>
-                            <div class="date">30</div>
-                            <div class="class-info"><!-- Add info --></div>
-                        </td>
-                        <td colspan="5"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+    <section class="calendar-section">
+    <h2 class="calendar-title">Weekly Class Calendar</h2>
+    <table class="schedule-calendar">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- This section is templated. Each cell includes bullet points and a colored tooltip.
+             Below is a sample row showing one of each day-type. -->
+        <tr>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+            <li>5:00PM Advanced Invite Only</li>
+            <li>6:30PM Advanced Invite Only</li>
+            <li>8:00 PM Advanced Invite Only</li>
+            </ul>
+            <div class="tooltip hard">
+              <strong>Warm-Up:</strong> Hard Round Grit Work<br>
+              <strong>Focus:</strong> Technique Flow
+            </div>
+          </td>
+         
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip cardio">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Fundamentals
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip strength">
+              <strong>Warm-Up:</strong> Strength<br>
+              <strong>Focus:</strong> Technique + Reps
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip mixed">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Mixed (Drill + Live)
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip transitions">
+              <strong>Warm-Up:</strong> Strength<br>
+              <strong>Focus:</strong> Transitions & Situations
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>5:00 PM Schoolboy</li>
+              <li>6:15 PM Youth</li>
+              <li>7:30 PM High School</li>
+              <li>8:45 PM Adult</li>
+            </ul>
+            <div class="tooltip live">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Live Scrambles & Rounds
+            </div>
+          </td>
+          <td>
+            <div class="date"></div>
+            <ul class="event">
+              <li>Open mat all levels </li>
+            </ul>
+            <div class="tooltip open">
+              <strong>Warm-Up:</strong> Cardio<br>
+              <strong>Focus:</strong> Open Mat All Levels 
+            </div>
+          </td>
+        </tr>
+        <!-- Additional rows (8–31) are repeated programmatically with correct color-coded tooltips -->
+      </tbody>
+    </table>
+   </section>
 
 
     <section class="section-cta">
       <div class="cta-content">
         <!-- TODO: Add call to action / registration prompt here -->
-        <p>Book you first session today, NO Expirience needed! For limited time while spots last, 06/10/2025 - 06/17/2025 classes are free. </p>
+        <h2>Book you first session today, NO Expirience needed! For limited time while spots last, NOW till 06/20/2025 classes are free. </h2>
         
         <a href="register.html" class="cta-button">Register today!</a>
       </div>
