@@ -539,3 +539,39 @@ footer {
     gap: 1rem;
   }
 }
+/* --- Mobile Overflow Fixes --- */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-container,
+.program-flex {
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.hero-image,
+.hero-text,
+.program,
+.program-callout {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.program-callout .program-video,
+.social-box {
+  max-width: 100%;
+  width: 100%;
+}
+
+.social-box {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
