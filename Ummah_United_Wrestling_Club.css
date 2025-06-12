@@ -15,6 +15,16 @@ body {
   background-color: var(--white);
   color: var(--gray-dark);
 }
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
 /* Navbar */
 .navbar {
@@ -65,11 +75,12 @@ body {
 .hero-container {
   display: flex;
   flex-wrap: wrap;
-  
+  overflow-x: hidden;
   align-items: stretch;
   justify-content: space-between;
   gap: 2rem;
 }
+.hero-container 
 
 
 
@@ -377,6 +388,7 @@ body {
   gap: 2rem;
   justify-content: space-between;
   align-items: flex-start;
+  overflow-x: hidden;
 }
 
 .program {
