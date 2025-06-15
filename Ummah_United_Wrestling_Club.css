@@ -542,124 +542,45 @@ footer {
   }
 }
 
-/* --- Revised Mobile Fixes --- */
-@media (max-width: 768px) {
-  .schedule-calendar {
-    width: 100%;
-    overflow-x: auto;
-    display: block;
-  }
-
-  .schedule-calendar thead,
-  .schedule-calendar tbody,
-  .schedule-calendar tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-  }
-
-  .schedule-calendar td,
-  .schedule-calendar th {
-    min-width: 100px;
-    font-size: 0.7rem;
-  }
-
-  .hero {
-    padding: 1rem;
-    overflow-x: hidden;
-  }
-
-  .hero-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hero-text, .hero-image {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-    padding: 0.5rem 0;
-  }
-}
-
-
-/* Hamburger Styles */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--white);
-  padding: 0.5rem 1rem;
-}
-
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: var(--primary-color);
-    padding: 1rem 0;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links li {
-    text-align: center;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-
-
-/* --- FINAL Hero Spillage Patch --- */
-.hero, .hero-container, .hero-image, .hero-text {
-  box-sizing: border-box;
+/* --- Green Hero Section Final Fix --- */
+.hero {
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  margin: 0;
   max-width: 100vw;
   overflow-x: hidden;
-  padding: 0;
-  margin: 0;
 }
 
 .hero-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.hero-image,
+.hero-text {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 10px;
 }
 
-.hero-text {
-  padding: 1rem;
-  width: 100%;
+.hero-text p {
+  padding: 0 1rem;
   text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--gray-dark);
 }
