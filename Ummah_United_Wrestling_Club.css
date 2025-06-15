@@ -632,3 +632,34 @@ footer {
     padding: 0.5rem 0;
   }
 }
+
+
+/* --- FINAL Hero Spillage Patch --- */
+.hero, .hero-container, .hero-image, .hero-text {
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-text {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+}
