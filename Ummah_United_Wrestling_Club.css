@@ -403,9 +403,11 @@ img,video{
 
 /*calander sections*/
 .schedule-calendar {
-  width: 100%;
+  max-width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
+  overflow-x: auto;
+  flex-wrap:wrap ;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -540,66 +542,48 @@ footer {
   }
 }
 
-/* UNIVERSAL MOBILE SAFETY NET */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-/* SECTION SAFEGUARDS */
-section,
-.section-light,
-.section-dark,
-.section-content,
-.hero-container,
-.program-flex {
-  width: 100%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* FLEX WRAP + STACKING FIX */
-.hero-container,
-.program-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-/* RESPONSIVE COLUMNS */
-.hero-image,
-.hero-text,
-.program,
-.program-callout {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-@media (min-width: 768px) {
-  .hero-text {
-    flex: 1 1 50%;
+/* --- Custom Fixes for Mobile Overflow --- */
+@media (max-width: 768px) {
+  .schedule-calendar {
+    display: block;
+    overflow-x: auto;
+    width: 100%;
   }
-  .hero-image {
-    flex: 1 1 45%;
-  }
-  .program {
-    flex: 1 1 60%;
-  }
-  .program-callout {
-    flex: 1 1 35%;
-  }
-}
 
-/* IMAGE & VIDEO PROTECTION */
-img, video {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  .schedule-calendar table,
+  .schedule-calendar thead,
+  .schedule-calendar tbody,
+  .schedule-calendar th,
+  .schedule-calendar td,
+  .schedule-calendar tr {
+    display: block;
+  }
+
+  .schedule-calendar td, .schedule-calendar th {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hero-text, .hero-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-text p {
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+  }
 }
